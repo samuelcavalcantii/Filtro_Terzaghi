@@ -19,24 +19,21 @@
         height: 100vh;
         
       }
-      .container-md{
-        
+      .container{
+       
         background: #3D3C3E;
         padding: 30px 40px;
         border-radius: 10px;
-        position: absolute;
-        top:50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
+        
       }
-      .container-md h2{
+      .container h2{
         color: #27C486;
         font-weight: bold;
         border-left: 5px solid  #27C486;
         font-size: 2rem;
         padding-left: 15px;
       }
-      .container-md p{
+      .container p{
         color: white;
         
 
@@ -49,28 +46,28 @@
 
   </head>
   <body>
-    <main>
-      <div class="container-md">
+    <main >
+      <div class="container ">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-12 col-md-6">
             <h2>Dimensionamento <br>de Filtros</h2>
              <P>Calcula o exato dimensionamento de filtros usando o critério de Terzaghi(1922), através da expressão:<br> D15/ d15 >= 5 <br>&& <br>D15/ d85 < = 4.
 
              </P>
           </div>
-          <div class="col-md-6">
+          <div class="col-12 col-md-6">
             <form >
               <div class="form-group">
                 <label for="formGroupExampleInput" class="form-label"></label>
-                <input type="number" class="form-control " id="num1" placeholder="Digite o valor da peneira D15 do Filtro: " autocomplete="off">
+                <input type="number" class="form-control " id="num1" placeholder="D15 do Filtro: " autocomplete="off">
               </div>
               <div class="form-group ">
                 <label for="formGroupExampleInput2" class="form-label"></label>
-                <input type="number" class="form-control " id="num2" placeholder="Digite o valor da peneira de D15 do Solo: " autocomplete="off">       
+                <input type="number" class="form-control " id="num2" placeholder="D15 do Solo: " autocomplete="off">       
               </div>
               <div class="form-group ">
                 <label for="formGroupExampleInput2" class="form-label"></label>
-                <input type="number" class="form-control " id="num3" placeholder="Digite o valor d a peneira de D85: " autocomplete="off">       
+                <input type="number" class="form-control " id="num3" placeholder="D85 do solo.: " autocomplete="off">       
               </div>
               <div class="mb-3 d-flex bd-highlight">
                 <input class=" m-2 d-inline  p-2 w-100 bd-highlight  btn btn-info" onclick="calcular()" type="button" value="Calcular" > 
@@ -78,15 +75,20 @@
                 <input id="limpar" class=" m-2 d-inline  p-2 w-100 bd-highlight btn btn-warning" type="reset"  value="C">
                 
                 </div>
-              <div class="mt-3 mb-3">
-                  <input id="resultado1" class="form-control" type="text" value="Mergulho aparente." aria-label="readonly input example" readonly>
-                  <input id="resultado2" class="form-control" type="text" value="Mergulho aparente." aria-label="readonly input example" readonly>
-                  <input id="resultado3" class="form-control" type="text" value="Mergulho aparente." aria-label="readonly input example" readonly>
+              <div class="form-group ">
+                
+
+                <input id="resultado2" class="form-control m-1" type="text" value="Piping." aria-label="readonly input example" readonly>
+
+                <input id="resultado3" class="form-control m-1" type="text" value="Permeabilidade do filtro." aria-label="readonly input example" readonly>
+
+                <input id="resultado1" class="form-control m-1" type="text" value="Qualidade do filtro." aria-label="readonly input example" readonly>
                 
               </div>
             </form>
-            <div class="container text-light text-center">
-              Desenvolvido<br>por <br> <a class="link-warning" href="https://github.com/samuelca valcantii " target="_blank">Samuel Cavalcanti</a> <i class="bi bi-github"></i>  </div>
+            <div class=" container-md text-light text-center">
+              Desenvolvido<br>por <br> <a class="link-warning" href="https://github.com/samuelcavalcantii " target="_blank">Samuel Cavalcanti</a> <i class="bi bi-github"></i>  
+            </div>
               
           </div>  
         </div>
