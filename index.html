@@ -16,25 +16,30 @@
       }
       main{
         background: #27C486;
-        height: 100vh;
+        height: 100%;
+        padding: 10px;
+        
         
       }
       .container{
        
-        background: #3D3C3E;
+        /*background: #3D3C3E;*/
         padding: 30px 40px;
-        border-radius: 10px;
+        border-radius: 30px;
+        
         
       }
       .container h2{
         color: #27C486;
         font-weight: bold;
-        border-left: 5px solid  #27C486;
+        border-bottom: 3px solid  #27C486;
         font-size: 2rem;
         padding-left: 15px;
       }
       .container p{
-        color: white;
+        /*color: white;
+        /*border-bottom: 3px solid #27C486;
+        padding-bottom: 15px;*/
         
 
       }
@@ -47,27 +52,28 @@
   </head>
   <body>
     <main >
-      <div class="container ">
+      <div class="container shadow-lg p-3 mb-5 bg-dark ">
         <div class="row">
-          <div class="col-12 col-md-6">
-            <h2>Dimensionamento <br>de Filtros</h2>
-             <P>Verifica a eficácia de um filtro com relção ao material de base (solo) usando o critério de Terzaghi (1922), que se dá através da expressão:<br> D15 (filtro)/ d15 (solo) >= 5; <br>&& <br>D15 (filtro)/ d85 (solo) <= 4.
+          <div class=" col-12 ">
+            <h2 class="display-4 text-center">Dimensionamento <br>de Filtros</h2>
+             <P class="lead jumbotron">Verifica a eficácia de um filtro com relação ao material de base (solo) usando o critério de Terzaghi (1922), que se dá através da expressão:<br> D15 (filtro)/ d15 (solo) >= 5; <br>&& <br>D15 (filtro)/ d85 (solo) <= 4. 
+             <hr class="bg-light my-4">
 
              </P>
           </div>
-          <div class="col-12 col-md-6">
+          <div class="col-12">
             <form >
-              <div class="form-group">
-                <label for="formGroupExampleInput" class="form-label"></label>
-                <input type="number" class="form-control " id="num1" placeholder="D15 do Filtro: " autocomplete="off">
+              <div class="form-group ">
+                <label for="formGroupExampleInput" class="form-label text-light">D15 do Filtro: </label>
+                <input type="number" class="form-control " id="num1" placeholder="ex. 0.1" autocomplete="off">
               </div>
               <div class="form-group ">
-                <label for="formGroupExampleInput2" class="form-label"></label>
-                <input type="number" class="form-control " id="num2" placeholder="D15 do Solo: " autocomplete="off">       
+                <label for="formGroupExampleInput2" class="form-label text-light">D15 do Solo: </label>
+                <input type="number" class="form-control " id="num2" placeholder="ex. 0.002" autocomplete="off">       
               </div>
               <div class="form-group ">
-                <label for="formGroupExampleInput2" class="form-label"></label>
-                <input type="number" class="form-control " id="num3" placeholder="D85 do solo.: " autocomplete="off">       
+                <label for="formGroupExampleInput2" class="form-label text-light">D85 do solo:</label>
+                <input type="number" class="form-control " id="num3" placeholder="ex. 0.2 " autocomplete="off">       
               </div>
               <div class="mb-3 d-flex bd-highlight">
                 <input class=" m-2 d-inline  p-2 w-100 bd-highlight  btn btn-info" onclick="calcular()" type="button" value="Calcular" > 
